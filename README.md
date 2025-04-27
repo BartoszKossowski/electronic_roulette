@@ -9,13 +9,12 @@ The idea of ​​implementing an electronic roulette was born from a ready-made
 - [x] create a board measuring 200 mm x 200 m with the option to accommodate 38 mm glasses.
 - [x] print the board
 - [x] Create a prototype of an electronic roulette wheel on a breadboard [Malfunction](#no-filtration-no-peace)
-- [] Design PCB
-- [] Produce PCB
-- [] Solder the PCB and check its operation
-- [] Create a PCB case and print it
-- [] Testing ;_;
-
-- [] Done
+- [ ] Design PCB
+- [ ] Produce PCB
+- [ ] Solder the PCB and check its operation
+- [ ] Create a PCB case and print it
+- [ ] Testing ;_;
+- [ ] Done
 
 
 # Model
