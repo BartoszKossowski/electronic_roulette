@@ -48,3 +48,47 @@ You can find the model in the prusa3D folder, file named "roulette v5.stl" or ju
 During the assembly of the entire electronic circuit, various errors occurred: from no operation, to operation at a lower voltage and even every other LED (only 5 out of ten) lighting up, interestingly every other one was perfect.
 
 I added a 100nF ceramic capacitor to each integrated circuit near the power supply pins and the problem was solved.
+
+
+# Control unit case
+
+The case provides space for the electronics and a 9V battery. Due to the lack of a power switch for the electronics, the battery is exposed so that it can be connected and disconnected efficiently.
+
+![CPCB](pic/t3points.png)
+
+For printing, you need to use all possible supports offered by PrusaSlicer. For better flexibility, I used Prusament PLA Galaxy Black filament.
+
+
+![ProjectPrint](pic/procesprint2.png)
+
+# PCB Manufacturing
+
+For PCB design I currently use the indestructible and best in class Eagle PCB. I created two layers of tracks, without vias to facilitate the assembly and milling process.
+
+The board is designed so that the line transmitting the clock from the NE555 is as short as possible. I connected the unused pin 5 in the NE555 with a 10nF capacitor to GND. I added (as I wrote earlier) a 100nF ceramic capacitor between Vdd and Vss (between +9V and GND) to each circuit. In order not to add too many components, I decided to design them as SMT-mounted components.
+
+A button to start the roulette is protruding from the front. I designed a small hole for the wires to the 9V battery and a hole at the back for the cable harness to the round roulette field (I will probably have to cut it out because the ribbon cable plug will not fit anyway)
+
+
+![PCBProProject](pic/boardPCB.png)
+
+
+One of the methods I have developed for making simple double-sided PCBs is milling copper laminates on a CNC milling machine.
+
+I use FlatCAM to create the gerber program.
+
+First, in Eagle PCB I export (generate) CAM Data.
+
+In FlatCAM, to position the PCB for milling on both sides, I used positioning points (4 small holes 4mm).
+
+
+![PCBcncjob](pic/createCNC.jpg)
+
+Thanks to the built-in tools in FlatCAM PCB, it was possible to mill in 1:1 reflection - the other side did not move after rotating it relative to the holes. 
+
+
+![PCBcncjob](pic/fantasticPCB.png)
+
+This is what a bare board looks like in a ready-made housing for control electronics.
+
+![PCBwithCase](pic/inCaseNakedPCB.jpg)
